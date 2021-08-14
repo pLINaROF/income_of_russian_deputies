@@ -1,9 +1,8 @@
 import requests, json
 from bs4 import BeautifulSoup
 
-host = 'http://duma.gov.ru'
-
 convocation_number = 7
+host = 'http://duma.gov.ru'
 deputies_convocation_url = f'{host}/duma/deputies/{convocation_number}/'
 
 print(f'Этап 1. Получаем список всех депутатов {convocation_number} созыва')
