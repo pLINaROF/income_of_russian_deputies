@@ -4,13 +4,7 @@
 
 Используемые библиотеки: requests, json, bs4, os, keyboard, tkinter, pandas
 
-Результаты парсинга доходов депутатов 7 созыва Государственной Думы находятся в файлах
+Результаты парсинга доходов депутатов 7 созыва Государственной Думы находятся в файлах:
 https://github.com/pLINaROF/income_of_russian_deputies/blob/main/data_with_income_rub.csv
 https://github.com/pLINaROF/income_of_russian_deputies/blob/main/data_with_income_rub.json
-
-data_with_income_rub.csv и data_with_income_rub.json
-
-
-
-
 
