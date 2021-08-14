@@ -1,4 +1,4 @@
-import requests, json
+import requests
 from bs4 import BeautifulSoup
 
 convocation_number = 7

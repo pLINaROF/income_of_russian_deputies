@@ -1,4 +1,5 @@
-import requests, json
+import requests
+import json
 from bs4 import BeautifulSoup
 
 host = 'http://duma.gov.ru'
