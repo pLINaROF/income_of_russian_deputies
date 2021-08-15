@@ -4,9 +4,8 @@ import tabula
 import pandas
 import glob
 
-# pdf to csv
+
 pdf_files = glob.glob(r'pdf/*.pdf')
-# print(pdf_files)
 n = 1
 for pdf_file in pdf_files:
     csv_file = str(pdf_file).replace('.pdf', '.csv')
@@ -14,24 +13,6 @@ for pdf_file in pdf_files:
     tabula.convert_into(pdf_file, csv_file, output_format="csv", pages='all')
     n += 1
 print('Смена формата завершена')
-
-# # tabula.convert_into("pdf/simple_table.pdf", "pdf/simple_table_1.csv", output_format="csv", pages='all')
-# # tabula.convert_into("pdf/simple_table_2.pdf", "pdf/simple_table_2.csv", output_format="csv", pages='all')
-# tabula.read_pdf("pdf/simple_table_2.pdf", pages='all')
-#
-#
-#
-# # df = pandas.read_csv("pdf/simple_table_2.csv", encoding='windows-1251', index_col=False)
-#
-#
-# # income = df.iloc[0].values[1].replace(',30 руб', '')
-# # print('доход депутатa:', income)
-#
-#
-# df.replace(r',.+', '', regex=True, inplace=True)
-#
-# income = df.iloc[0].values[1]
-# print('income', income)
 
 
 print('Получаем доход из csv')
@@ -42,7 +23,6 @@ for csv_file in csv_files:
     deputy_id, deputy_name, consignment_name, income_year = csv_file.split('; ')
     deputy_id = int(str(deputy_id).split('\\')[1])
     df = pandas.read_csv(csv_file, encoding='windows-1251', index_col=False)
-    # df.replace(r',.+', '', regex=True, inplace=True)
 
     try:
         income_sum = df.iloc[0].values[1]
