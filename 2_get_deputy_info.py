@@ -3,8 +3,7 @@ import json
 from bs4 import BeautifulSoup
 
 host = 'http://duma.gov.ru'
-print('Этап 2. Получаем информацию по депутатам (id, ФИО, партия, ссылка '
-      'на сведения о доходах (при наличии), номер созыва)')
+print('Этап 2. Получаем информацию по депутатам (id, ФИО, партия, ссылка на сведения о доходах (при наличии))')
 data_dict = []
 n = 0
 with open('deputy_page_urls_list.txt') as file:
